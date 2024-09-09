@@ -1,0 +1,235 @@
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4; /* Soft background color */
+    color: #333;
+    scroll-snap-type: y mandatory; /* Vertical snapping */
+    overflow-y: scroll; /* Allows vertical scrolling */
+    height: 100%; /* Ensures the body takes up full viewport height */
+}
+
+section {
+    scroll-snap-align: start; /* Each section will align to the start of the viewport */
+    width: 100%; /* Ensures sections stretch across the full width */
+    min-height: 100vh; /* Each section takes at least the height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers content within each section */
+    flex-direction: column;
+}
+
+/* Remaining CSS for other elements remains unchanged */
+
+
+header {
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures the header spans the full width of the viewport */
+    background-color: #ffffff; /* Maintains visibility over content */
+    z-index: 1000; /* Keeps header above all other content */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds depth with a shadow */
+    padding: 1rem 2rem;
+}
+
+body {
+    padding-top: 70px; /* Add top padding to body to prevent content from hiding behind the fixed header */
+}
+
+
+header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fb8500; /* Brand color for app name */
+}
+
+.hero {
+    background-color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.subscription-form {
+    margin: 20px 0;
+}
+
+#email-input {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 30px; /* More rounded borders */
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+#email-input:focus {
+    border-color: #fb8500; /* Highlight the input when focused */
+}
+
+.subscribe-button {
+    background: #fb8500;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-button:hover {
+    background-color: #ffa500; /* Lighter orange on hover */
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+.btn {
+    background-color: #fb8500;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+/* Tasks Section Styling */
+.tasks-section {
+    padding: 3rem 2rem; /* Padding around the entire section */
+    background-color: #f4f4f4; /* Light background for contrast */
+    text-align: center; /* Center the content */
+}
+
+/* Grid Layout for Tasks */
+.tasks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+    grid-gap: 2rem; /* Space between items */
+    justify-items: center; /* Center items horizontally */
+    align-items: start; /* Align items to the top */
+}
+
+.task {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #fff; /* Clean white background */
+    border-radius: 12px; /* Softer rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.task:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.task img {
+    width: 100%;
+    max-width: 250px; /* Control the size of the images */
+    height: auto;
+    margin-bottom: 1rem; /* Space between image and text */
+    border-radius: 8px; /* Round the image corners slightly */
+}
+
+.task-info p {
+    font-size: 1.2rem;
+    color: #333; /* Consistent text color */
+    margin: 0;
+}
+
+/* Header Styling Below Tasks */
+.task-header h2 {
+    font-size: 2.5rem;
+    color: #fb8500; /* Accent color for brand consistency */
+    margin-top: 2rem;
+}
+
+.app-instructions {
+    background-color: #f4f4f4;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.app-instructions .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.app-instructions h2 {
+    font-size: 2.5rem;
+    color: #023047;
+    margin-bottom: 2rem;
+}
+
+.instruction {
+    margin-bottom: 2rem;
+}
+
+.instruction img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.instruction p {
+    font-size: 1.25rem;
+    color: #495057;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+footer {
+    background-color: #ffffff;
+    color: #666;
+    text-align: center;
+    padding: 1rem 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.875rem;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .tasks {
+        grid-template-columns: 1fr; /* Switch to single column on smaller screens */
+    }
+
+    .task img {
+        max-width: 100%; /* Ensure images are fully responsive */
+    }
+    .hero {
+        padding: 1rem;
+    }
+
+    .content {
+        padding: 1rem 2rem;
+    }
+}
