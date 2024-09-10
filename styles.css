@@ -50,62 +50,83 @@ header h1 {
 }
 
 .hero {
-    background-color: #fff;
+   /* background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* Soft gradient background */
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0 2rem;
+    text-align: center;
 }
 
 .content {
-    text-align: center;
-    padding: 20px;
-    width: 100%;
     max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background for contrast */
+    border-radius: 15px; /* Softer rounded corners for a modern look */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+h2 {
+    font-size: 3rem;
+    color: #343a40; /* Darker gray for the header */
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #6c757d; /* Softer gray for paragraph */
+    margin-bottom: 1.5rem;
+}
+
+/* Subscription Form Styling */
 .subscription-form {
-    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
 }
 
 #email-input {
     width: 70%;
-    padding: 10px;
+    padding: 12px;
     border: 2px solid #ccc;
-    border-radius: 30px; /* More rounded borders */
+    border-radius: 50px; /* Round the input */
     outline: none;
     font-size: 1rem;
     transition: border-color 0.3s;
 }
 
 #email-input:focus {
-    border-color: #fb8500; /* Highlight the input when focused */
+    border-color: #fb8500; /* Brand color highlight */
 }
 
 .subscribe-button {
     background: #fb8500;
     color: white;
     border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
+    border-radius: 50px; /* Rounded button */
+    padding: 12px 30px;
+    font-size: 1.1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+    margin-left: 1rem;
 }
 
 .subscribe-button:hover {
     background-color: #ffa500; /* Lighter orange on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
 }
 
-h2 {
-    font-size: 2.5rem;
-}
-
-p {
+/* Launch Info Styling */
+.launch-info {
     font-size: 1.25rem;
+    color: #495057; /* Softer grey for contrast */
+    margin-top: 1.5rem;
+    font-weight: 600; /* Make it more prominent */
 }
-
 .btn {
     background-color: #fb8500;
     padding: 1rem 2rem;
@@ -183,11 +204,14 @@ p {
 
 .instruction {
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .instruction img {
     width: 100%;
-    max-width: 350px;
+    max-width: 250px;
     height: auto;
     margin-bottom: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -198,6 +222,18 @@ p {
     color: #495057;
     max-width: 600px;
     margin: 0 auto;
+}
+
+h3 {
+    font-size: 2rem;
+    color: #343a40; /* Darker gray for the header */
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.steps-text {
+    display: flex;
+    flex-direction: column;
 }
 
 
