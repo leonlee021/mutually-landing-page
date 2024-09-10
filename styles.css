@@ -39,9 +39,9 @@ header {
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
+    justify-content: space-between;
 }
 
 /* Logo Styling */
@@ -52,13 +52,18 @@ header {
     margin: 0;
 }
 
+.navbar {
+    flex-grow: 0;
+    margin-right: 60px;
+}
+
 /* Navigation Bar Styling */
 .navbar ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap; /* Allows wrapping if space runs out */
+    flex-wrap: nowrap;
 }
 
 .navbar ul li {
