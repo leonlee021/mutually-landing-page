@@ -23,24 +23,65 @@ section {
     flex-direction: column;
 }
 
-/* Remaining CSS for other elements remains unchanged */
-
-
 header {
-    position: fixed; /* Fix the header at the top */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Ensures the header spans the full width of the viewport */
-    background-color: #ffffff; /* Maintains visibility over content */
-    z-index: 1000; /* Keeps header above all other content */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds depth with a shadow */
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo Styling */
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fb8500;
+    margin: 0;
+}
+
+/* Navigation Bar Styling */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; /* Allows wrapping if space runs out */
+}
+
+.navbar ul li {
+    margin-left: 1.5rem; /* Adjusted margin to fit more items */
+    flex-shrink: 1; /* Allow items to shrink */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #495057;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #fb8500; /* Brand color on hover */
+}
+
+/* Sticky Header Adjustment */
 body {
-    padding-top: 70px; /* Add top padding to body to prevent content from hiding behind the fixed header */
+    padding-top: 80px; /* Ensure content is not hidden behind the fixed header */
 }
-
 
 header h1 {
     margin: 0;
@@ -265,5 +306,23 @@ footer p {
 
     .content {
         padding: 1rem 2rem;
+    }
+    .navbar ul {
+        display: none; /* Hide navigation on smaller screens */
+    }
+
+    .navbar ul.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #fff;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+    }
+
+    .navbar ul li {
+        margin: 1rem 0;
     }
 }
