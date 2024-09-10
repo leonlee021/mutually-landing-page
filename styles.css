@@ -4,12 +4,14 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4; /* Soft background color */
+    background-color: #f4f4f4;
     color: #333;
-    scroll-snap-type: y mandatory; /* Vertical snapping */
-    overflow-y: scroll; /* Allows vertical scrolling */
-    height: 100%; /* Ensures the body takes up full viewport height */
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-y: scroll;
+    height: 100%;
 }
+
 
 section {
     scroll-snap-align: start; /* Each section will align to the start of the viewport */
@@ -120,11 +122,14 @@ p {
 
 /* Grid Layout for Tasks */
 .tasks {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
-    grid-gap: 2rem; /* Space between items */
+    display: flex;
+    /*grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
     justify-items: center; /* Center items horizontally */
-    align-items: start; /* Align items to the top */
+    /*align-items: start; /* Align items to the top */
+    flex-direction: row;
+    padding: 0.5rem;
+    max-width: 100%; /* Ensure container doesn’t exceed 100% of the viewport */
+    box-sizing: border-box; 
 }
 
 .task {
@@ -132,28 +137,21 @@ p {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1.5rem;
-    background-color: #fff; /* Clean white background */
-    border-radius: 12px; /* Softer rounded corners */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-}
-
-.task:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    margin: 30px;
 }
 
 .task img {
-    width: 100%;
-    max-width: 250px; /* Control the size of the images */
-    height: auto;
+    width: 180px;
+    object-fit: cover;
+    /*max-width: 250px; /* Control the size of the images */
+    height: 300px;
     margin-bottom: 1rem; /* Space between image and text */
     border-radius: 8px; /* Round the image corners slightly */
 }
 
 .task-info p {
     font-size: 1.2rem;
+    max-width: 180px;
     color: #333; /* Consistent text color */
     margin: 0;
 }
