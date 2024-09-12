@@ -28,9 +28,9 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -50,37 +50,6 @@ header {
     font-size: 1.5rem;
     color: #fb8500;
     margin: 0;
-}
-
-.navbar {
-    flex-grow: 0;
-    margin-right: 60px;
-}
-
-/* Navigation Bar Styling */
-.navbar ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    flex-wrap: nowrap;
-}
-
-.navbar ul li {
-    margin-left: 1.5rem; /* Adjusted margin to fit more items */
-    flex-shrink: 1; /* Allow items to shrink */
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    font-size: 1.1rem;
-    color: #495057;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-    color: #fb8500; /* Brand color on hover */
 }
 
 /* Sticky Header Adjustment */
@@ -105,6 +74,30 @@ header h1 {
     padding: 0 2rem;
     text-align: center;
 }
+
+/* App Buttons Styling */
+.app-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.app-buttons a {
+    margin: 0 1rem;
+    display: inline-block;
+}
+
+.app-buttons img {
+    width: 150px; /* Set a fixed width for the buttons */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.app-buttons img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
 
 .content {
     max-width: 600px;
@@ -168,7 +161,7 @@ p {
 
 /* Launch Info Styling */
 .launch-info {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     color: #495057; /* Softer grey for contrast */
     margin-top: 1.5rem;
     font-weight: 600; /* Make it more prominent */
