@@ -48,7 +48,7 @@ header {
 .logo {
     font-weight: 700;
     font-size: 1.5rem;
-    color: #fb8500;
+    color: #1DA1F2;
     margin: 0;
 }
 
@@ -61,41 +61,112 @@ header h1 {
     margin: 0;
     font-weight: 700;
     font-size: 1.5rem;
-    color: #fb8500; /* Brand color for app name */
+    color: #1DA1F2; /* Brand color for app name */
 }
 
+/* Hero Section Styling */
 .hero {
-   /* background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* Soft gradient background */
-    height: 100vh;
+    height: 100vh; /* Full height */
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     padding: 0 2rem;
-    text-align: center;
+}
+
+.hero-container {
+    display: flex; /* Flexbox for split layout */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Max width for container */
+}
+
+/* Left Side - Text Content */
+.hero-text {
+    flex: 1; /* Take up half the space */
+    padding-right: 2rem; /* Add space between text and image */
+    text-align: left; /* Align text to the left */
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    color: #343a40;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+/* Right Side - Hero Image */
+.hero-image {
+    flex: 1; /* Take up the other half of the space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+     max-width: 55%; /* Ensure the image doesn't exceed its container */
+    height: auto;
+    border-radius: 15px; /* Slightly round the corners of the image */
+}
+
+/* Subscription Form Styling */
+.subscription-form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+#email-input {
+    width: 70%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+#email-input:focus {
+    border-color: #1DA1F2;
+}
+
+.subscribe-button {
+    background: #1DA1F2;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-left: 1rem;
 }
 
 /* App Buttons Styling */
 .app-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 2rem;
 }
 
 .app-buttons a {
-    margin: 0 1rem;
-    display: inline-block;
+    margin-right: 1rem;
 }
 
 .app-buttons img {
-    width: 150px; /* Set a fixed width for the buttons */
+    width: 150px;
     height: auto;
     transition: transform 0.3s ease;
 }
 
 .app-buttons img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.05);
 }
 
 
@@ -120,44 +191,6 @@ p {
     margin-bottom: 1.5rem;
 }
 
-/* Subscription Form Styling */
-.subscription-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-#email-input {
-    width: 70%;
-    padding: 12px;
-    border: 2px solid #ccc;
-    border-radius: 50px; /* Round the input */
-    outline: none;
-    font-size: 1rem;
-    transition: border-color 0.3s;
-}
-
-#email-input:focus {
-    border-color: #fb8500; /* Brand color highlight */
-}
-
-.subscribe-button {
-    background: #fb8500;
-    color: white;
-    border: none;
-    border-radius: 50px; /* Rounded button */
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s ease-in-out;
-    margin-left: 1rem;
-}
-
-.subscribe-button:hover {
-    background-color: #ffa500; /* Lighter orange on hover */
-    transform: translateY(-3px); /* Lift effect on hover */
-}
 
 /* Launch Info Styling */
 .launch-info {
@@ -167,7 +200,7 @@ p {
     font-weight: 600; /* Make it more prominent */
 }
 .btn {
-    background-color: #fb8500;
+    background-color: #1DA1F2;
     padding: 1rem 2rem;
     border-radius: 5px;
     font-size: 1.25rem;
@@ -219,7 +252,7 @@ p {
 /* Header Styling Below Tasks */
 .task-header h2 {
     font-size: 2.5rem;
-    color: #fb8500; /* Accent color for brand consistency */
+    color: #1DA1F2; /* Accent color for brand consistency */
     margin-top: 2rem;
 }
 
