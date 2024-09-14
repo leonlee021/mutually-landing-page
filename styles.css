@@ -6,7 +6,7 @@ html, body {
     box-sizing: border-box;
     background-color: #f4f4f4;
     color: #333;
-    scroll-snap-type: y mandatory;
+    /*scroll-snap-type: y mandatory;
     overflow-x: hidden; /* Prevent horizontal overflow */
     overflow-y: scroll;
     height: 100%;
@@ -14,7 +14,7 @@ html, body {
 
 
 section {
-    scroll-snap-align: start; /* Each section will align to the start of the viewport */
+    /*scroll-snap-align: start; /* Each section will align to the start of the viewport */
     width: 100%; /* Ensures sections stretch across the full width */
     min-height: 100vh; /* Each section takes at least the height of the viewport */
     display: flex;
@@ -273,58 +273,62 @@ p {
     color: #1DA1F2; /* Accent color for brand consistency */
     margin-top: 2rem;
 }
-
 .app-instructions {
     background-color: #f4f4f4;
-    padding: 4rem 0;
+    padding: 4rem 1rem;
     text-align: center;
 }
 
-.app-instructions .container {
-    max-width: 1200px;
+.container {
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.app-instructions h2 {
+h2 {
     font-size: 2.5rem;
     color: #023047;
     margin-bottom: 2rem;
 }
 
-.instruction {
-    margin-bottom: 2rem;
+.steps-row {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.instruction {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Aligns content to space between */
+    margin: 0 10px;
+    padding: 20px;
 }
 
 .instruction img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.instruction p {
-    font-size: 1.25rem;
-    color: #495057;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-h3 {
-    font-size: 2rem;
-    color: #343a40; /* Darker gray for the header */
-    margin-bottom: 1rem;
-    font-weight: 700;
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 275px; /* Maximum width for the image */
+    margin-top: auto; /* Pushes the image to the bottom */
+    align-self: center; /* Center align the image */
 }
 
 .steps-text {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 20px; /* Space between text and image */
 }
+
+.steps-text h3 {
+    font-size: 1.75rem;
+    color: #343a40;
+    margin-bottom: 0.5rem;
+}
+
+.steps-text p {
+    font-size: 1.25rem;
+    color: #495057;
+}
+
 
 /* FAQ Section Styling */
 .faq-section {
@@ -387,6 +391,27 @@ footer p {
         padding: 1rem;
     }
 
+    .hero-container{
+        margin-left: 50px;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+        color: #343a40;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+    
+    .hero-text p {
+        font-size: 1.25rem;
+        color: #6c757d;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-image {
+        max-width: 70%;
+    }
+
     .content {
         padding: 1rem 2rem;
     }
@@ -414,5 +439,28 @@ footer p {
 
     .faq-item p {
         font-size: 1.1rem;
+    }
+    .steps-row {
+        flex-direction: column;
+    }
+
+    .instruction {
+        flex: 1 1 100%; /* Takes full width on small screens */
+        margin: 10px 0; /* Adds vertical space */
+    }
+
+    .instruction img {
+        max-width: 40%; /* Full width images on smaller screens */
+    }
+
+    .steps-text h3 {
+        font-size: 1.5rem;
+        color: #343a40;
+        margin-bottom: 0.5rem;
+    }
+    
+    .steps-text p {
+        font-size: 1rem;
+        color: #495057;
     }
 }
