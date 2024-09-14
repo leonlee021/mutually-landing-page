@@ -104,16 +104,25 @@ header h1 {
 /* Right Side - Hero Image */
 .hero-image {
     flex: 1; /* Take up the other half of the space */
+    position: relative; /* Necessary for absolutely positioned children */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .hero-image img {
-     max-width: 55%; /* Ensure the image doesn't exceed its container */
+    position: absolute; /* Stack images on top of each other */
+    max-width: 55%; /* Ensure the image doesn't exceed its container */
     height: auto;
     border-radius: 15px; /* Slightly round the corners of the image */
+    opacity: 0; /* Start with images invisible */
+    animation: fadeAnimation 16s infinite;
 }
+
+.hero-image img:nth-child(1) { animation-delay: 0s; }
+.hero-image img:nth-child(2) { animation-delay: 4s; }
+.hero-image img:nth-child(3) { animation-delay: 8s; }
+.hero-image img:nth-child(4) { animation-delay: 12s; }
 
 /* Subscription Form Styling */
 .subscription-form {
@@ -122,6 +131,15 @@ header h1 {
     align-items: center;
     margin-bottom: 1.5rem;
 }
+
+@keyframes fadeAnimation {
+    0% { opacity: 0; }
+    6.25% { opacity: 1; }
+    25% { opacity: 1; }
+    31.25% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
 
 #email-input {
     width: 70%;
