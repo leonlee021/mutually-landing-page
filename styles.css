@@ -141,7 +141,7 @@ header h1 {
 .hero-image img:nth-child(4) { animation-delay: 12s; }
 
 /* Subscription Form Styling */
-.subscription-form {
+.subscription-form-1 {
     display: flex;
     justify-content: flex-start;
     align-items: center;

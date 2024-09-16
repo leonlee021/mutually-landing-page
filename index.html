@@ -25,10 +25,10 @@
                 <p class="promo-info">Join our mailing list now to receive $5 credit when we launch!</p>
 
                 <!-- Mailing list subscription form -->
-                <div class="subscription-form">
-                    <input type="email" placeholder="Email Address" id="email-input">
+                <form id = "subscription-form-1" class="subscription-form">
+                    <input type="email" placeholder="Email Address" id="email-input" class="email-input">
                     <button type="submit" class="subscribe-button">Join</button>
-                </div>
+                </form>
     
                 <!-- Launch information -->
                 <p class="launch-info">Launching in Toronto in winter 2024!</p>
@@ -129,11 +129,11 @@
             </div>
             <div class="email-signup">
                 <p class="cta-text">Join our mailing list and stay updated!</p>
-                <div class="subscription-form-2">
-                    <input type="email" placeholder="Email Address" id="email-input-footer">
+                <form class="subscription-form" id="subscription-form-2">
+                    <input type="email" placeholder="Email Address" id="email-input-footer" class="email-input">
                     <button type="submit" class="subscribe-button-2">Join</button>
                 </div>
-            </div>
+            </form>
             
         </div>
     </section>
@@ -158,6 +158,29 @@
         <p>&copy; 2024 Mutually. All rights reserved.</p>
     </div>
 </footer>
+
+<script>
+document.querySelectorAll('.subscription-form').forEach(form => {
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent the form from submitting in the traditional way
+        const email = this.querySelector('.email-input').value;  // Get the email from the same form
+
+        fetch('https://your-app-name.herokuapp.com/subscribe', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email: email })
+        })
+
+        .then(response => response.text())
+        .then(data => alert(data))
+        .catch(error => console.error('Error:', error));
+    });
+});
+
+</script>
+
 
 </body>
 </html>
