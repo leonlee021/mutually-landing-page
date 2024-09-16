@@ -101,6 +101,22 @@ header h1 {
     margin-bottom: 1.5rem;
 }
 
+.hero-text .promo-info {
+    font-size: 1rem; /* Smaller font size */
+    color: #fb0000; /* Subtle yet noticeable color */
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f4f4f4; /* Light background to keep it subtle */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transform: rotate(-2deg); /* Slight tilt */
+    display: inline-block; /* Allows transform to affect the element */
+    max-width: 80%; /* Limit width to avoid too much horizontal stretch */
+    opacity: 0.9; /* Slightly less prominent */
+}
+
+
 /* Right Side - Hero Image */
 .hero-image {
     flex: 1; /* Take up the other half of the space */
@@ -142,13 +158,18 @@ header h1 {
 
 
 #email-input {
-    width: 70%;
-    padding: 12px;
+    width: 70%; /* Adjust width if necessary */
+    padding: 12px 20px; /* Adjust padding to ensure text fits well */
     border: 2px solid #ccc;
-    border-radius: 50px;
+    border-radius: 50px; /* Keep the rounded borders */
     outline: none;
-    font-size: 1rem;
+    font-size: 1rem; /* Ensure the font size is not too large */
     transition: border-color 0.3s;
+    box-sizing: border-box; /* Ensures padding does not affect the overall width */
+}
+
+#email-input::placeholder {
+    color: #aaa; /* Optional: style placeholder text */
 }
 
 #email-input:focus {
@@ -329,54 +350,151 @@ h2 {
     color: #495057;
 }
 
-
-/* FAQ Section Styling */
-.faq-section {
+.testimonials {
     background-color: #f4f4f4;
-    padding: 4rem 0;
+    padding: 4rem 1rem;
     text-align: center;
 }
 
-.faq-section h2 {
+.testimonials h2 {
     font-size: 2.5rem;
     color: #023047;
     margin-bottom: 2rem;
 }
 
-.faq-item {
-    margin-bottom: 2rem;
+.testimonial-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.testimonial {
+    flex: 1 1 270px; /* Minimum width of 270px */
+    margin: 15px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    max-width: 800px;
-    margin: 0 auto 2rem auto; /* Center the items */
 }
 
-.faq-item h3 {
-    font-size: 1.75rem;
-    color: #343a40;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
+.testimonial-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
-.faq-item p {
+.testimonial-text {
     font-size: 1.25rem;
     color: #495057;
-    line-height: 1.6;
-    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-name {
+    font-size: 1rem;
+    color: #343a40;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .testimonial-items {
+        flex-direction: column;
+    }
+    .testimonial {
+        flex-basis: 100%; /* Full width on small screens */
+    }
 }
 
 
 footer {
-    background-color: #ffffff;
-    color: #666;
+    background-color: #023047;
+    color: #ffffff;
+    padding: 2rem 1rem;
     text-align: center;
-    padding: 1rem 0;
-    bottom: 0;
-    width: 100%;
+}
+
+.footer-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-content p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
 }
 
 footer p {
-    font-size: 0.875rem;
+    font-size: 1rem;
+    margin-top: 2rem;
 }
+.testimonials {
+    background-color: #f4f4f4;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.testimonial-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem; /* Space above the CTA */
+}
+
+.email-signup {
+    background-color: #1DA1F2; /* Deep blue background */
+    color: white;
+    padding: 1.5rem; /* Suitable padding for compact appearance */
+    border-radius: 8px;
+    margin: 2rem auto; /* Auto margin for horizontal centering, with additional vertical spacing */
+    max-width: 500px; /* Restricting max width for better alignment */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex; /* Using flexbox */
+    flex-direction: column; /* Vertical stacking */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.cta-text {
+    margin-bottom: 1rem; /* Space above the form */
+    font-size: 1.2rem; /* Slightly larger text for better visibility */
+    color: white;
+}
+
+.subscription-form-2 {
+    width: 100%; /* Full width to match container */
+    display: flex;
+    justify-content: center; /* Center form elements horizontally */
+    gap: 10px; /* Space between input and button */
+}
+
+#email-input-footer {
+    flex-grow: 1; /* Allow input to grow and fill space */
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.subscribe-button-2 {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    background-color: white; /* White button */
+    color: #1DA1F2; /* Button text color matching the background of the container */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.subscribe-button-2:hover {
+    background-color: #FF617A; /* Lighter red on hover */
+    transform: translateY(-2px); /* Slight raise effect on hover */
+}
+
 
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {
@@ -406,6 +524,12 @@ footer p {
         font-size: 1.25rem;
         color: #6c757d;
         margin-bottom: 1.5rem;
+    }
+
+    .hero-text .promo-info {
+        transform: rotate(0deg); /* Removes tilt on smaller devices */
+        font-size: 1rem; /* Further reduce font size for small screens */
+        padding: 8px; /* Slightly reduce padding */
     }
 
     .hero-image {
