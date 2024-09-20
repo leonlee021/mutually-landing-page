@@ -300,11 +300,6 @@ p {
     text-align: center;
 }
 
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
 
 h2 {
     font-size: 2.5rem;
@@ -312,43 +307,156 @@ h2 {
     margin-bottom: 2rem;
 }
 
+/* Container styling */
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Steps row: each step alternates between left and right */
 .steps-row {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+/* Requester step aligned to the left */
+.requester-step {
+    justify-content: flex-start;
+}
+
+/* Tasker step aligned to the right */
+.tasker-step {
+    justify-content: flex-end;
+}
+
+/* Instruction box styling */
+.instruction {
+    width: 45%; /* Adjust as needed */
+    padding: 20px;
+    text-align: left;
+}
+
+/* Requester-specific styling */
+.requester {
+    border-left: 5px solid #fb8500;
+}
+
+/* Tasker-specific styling */
+.tasker {
+    border-right: 5px solid #1DA1F2;
+    text-align: right; /* Align text to the right for taskers */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Steps row: Flexbox for the layout */
+.steps-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+}
+
+/* Requester and Tasker labels */
+.role-label {
+    position: absolute;
+    top: -30px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 80px;
+}
+
+/* Distinct colors for requester and tasker labels */
+.requester-label {
+    background-color: #fb8500;
+    color: white;
+    left: 0;
+}
+
+.tasker-label {
+    background-color: #1DA1F2;
+    color: white;
+    right: 0;
+}
+
+
+/* Image styling to fit within the container */
+.instruction img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .instruction {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Aligns content to space between */
-    margin: 0 10px;
-    padding: 20px;
+    /* display: flex; /* Flexbox to align text and image horizontally */
+    align-items: center; /* Vertically align text and image */
+    justify-content: space-between; /* Distribute space between text and image */
+    gap: 2rem; /* Gap between text and image */
+    width: 100%;
+    max-width: 100%; /* Take full width of the container */
+    padding: 20px; */
 }
 
-.instruction img {
-    width: 100%; /* Full width of the container */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 275px; /* Maximum width for the image */
-    margin-top: auto; /* Pushes the image to the bottom */
-    align-self: center; /* Center align the image */
-}
 
-.steps-text {
-    margin-bottom: 20px; /* Space between text and image */
-}
 
-.steps-text h3 {
-    font-size: 1.75rem;
+
+/* Heading styling */
+.steps-row h3 {
+    font-size: 2rem;
     color: #343a40;
     margin-bottom: 0.5rem;
 }
 
-.steps-text p {
-    font-size: 1.25rem;
+/* Paragraph styling */
+.steps-row p {
+    font-size: 1.5rem;
     color: #495057;
 }
+
+/* Zigzag alignment adjustments */
+.requester-step .instruction {
+    text-align: left;
+
+}
+
+.tasker-step .instruction {
+    text-align: right;
+}
+
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    /* Stack the steps vertically on smaller screens */
+    .steps-row {
+        justify-content: center;
+    }
+
+    .instruction {
+        width: 90%;
+        text-align: center;
+    }
+
+    .tasker-step .instruction {
+        text-align: center;
+    }
+}
+
 
 .testimonials {
     background-color: #f4f4f4;
