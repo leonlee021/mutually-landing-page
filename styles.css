@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box; /* Make sure padding and border are included in the element's width and height */
+    margin: 0;
+    padding: 0;
+}
+
 html, body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
@@ -6,17 +12,18 @@ html, body {
     box-sizing: border-box;
     background-color: #f4f4f4;
     color: #333;
-    /*scroll-snap-type: y mandatory;
-    overflow-x: hidden; /* Prevent horizontal overflow */
-    overflow-y: scroll;
+    width: 100%;
     height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+
 
 
 section {
     /*scroll-snap-align: start; /* Each section will align to the start of the viewport */
     width: 100%; /* Ensures sections stretch across the full width */
     min-height: 100vh; /* Each section takes at least the height of the viewport */
+    
     display: flex;
     justify-content: center;
     align-items: center; /* Centers content within each section */
@@ -376,7 +383,7 @@ h2 {
     padding: 5px 10px;
     border-radius: 5px;
     text-align: center;
-    width: 80px;
+    width: 100px;
 }
 
 /* Distinct colors for requester and tasker labels */
@@ -414,8 +421,6 @@ h2 {
 }
 
 
-
-
 /* Heading styling */
 .steps-row h3 {
     font-size: 2rem;
@@ -439,23 +444,6 @@ h2 {
     text-align: right;
 }
 
-
-/* Media Query for responsiveness */
-@media (max-width: 768px) {
-    /* Stack the steps vertically on smaller screens */
-    .steps-row {
-        justify-content: center;
-    }
-
-    .instruction {
-        width: 90%;
-        text-align: center;
-    }
-
-    .tasker-step .instruction {
-        text-align: center;
-    }
-}
 
 
 .testimonials {
@@ -618,96 +606,132 @@ footer p {
     transform: scale(1.1); /* Slightly enlarge the icon on hover */
 }
 
-
-/* Responsive Design Adjustments */
 @media (max-width: 768px) {
-    .tasks {
-        grid-template-columns: 1fr; /* Switch to single column on smaller screens */
+    /* General adjustments for small screens */
+    html, body {
+        font-size: 14px; /* Slightly smaller font for better readability */
     }
 
-    .task img {
-        max-width: 100%; /* Ensure images are fully responsive */
+    .container {
+        max-width: 100%; /* Allow full width on small screens */
+        padding: 0 10px; /* Smaller padding to avoid overflow */
     }
+
     .hero {
-        padding: 1rem;
+        padding: 1rem 0;
     }
 
-    .hero-container{
-        margin-left: 50px;
+
+
+    /* Hero Section Adjustments */
+    .hero-container {
+        flex-direction: column; /* Stack text and image vertically */
     }
 
-    .hero-text h2 {
-        font-size: 2rem;
-        color: #343a40;
-        margin-bottom: 1rem;
-        font-weight: 700;
-    }
-    
-    .hero-text p {
-        font-size: 1.25rem;
-        color: #6c757d;
-        margin-bottom: 1.5rem;
+    .hero-text {
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 2rem;
     }
 
-    .hero-text .promo-info {
-        transform: rotate(0deg); /* Removes tilt on smaller devices */
-        font-size: 1rem; /* Further reduce font size for small screens */
-        padding: 8px; /* Slightly reduce padding */
+
+    .hero-image img {
+        max-width: 80%; /* Adjust the size of the image for mobile */
+        height: auto;
     }
 
-    .hero-image {
-        max-width: 70%;
-    }
 
-    .content {
-        padding: 1rem 2rem;
-    }
-    .navbar ul {
-        display: none; /* Hide navigation on smaller screens */
-    }
-
-    .navbar ul.show {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        background-color: #fff;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        padding: 1rem;
-    }
-
-    .navbar ul li {
-        margin: 1rem 0;
-    }
-    .faq-item h3 {
-        font-size: 1.5rem;
-    }
-
-    .faq-item p {
-        font-size: 1.1rem;
-    }
+    /* Instructions Section Adjustments */
     .steps-row {
-        flex-direction: column;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align content */
+        text-align: center; /* Center the text */
+        width: 100%; /* Ensure the full width is used */
+        margin: 0 auto;
     }
 
     .instruction {
-        flex: 1 1 100%; /* Takes full width on small screens */
-        margin: 10px 0; /* Adds vertical space */
+        width: 60%; /* Ensure the instruction takes up most of the screen */
+        margin-bottom: 20px; /* Add spacing between steps */
     }
 
     .instruction img {
-        max-width: 40%; /* Full width images on smaller screens */
+        max-width: 100%; /* Ensure images scale to fit smaller screens */
+        height: auto;
+        margin-bottom: 10px;
     }
 
-    .steps-text h3 {
-        font-size: 1.5rem;
-        color: #343a40;
-        margin-bottom: 0.5rem;
+    .steps-text {
+        margin: 0; /* Remove excess margin */
+        font-size: 1rem; /* Decrease font size for readability */
     }
-    
-    .steps-text p {
-        font-size: 1rem;
-        color: #495057;
+
+    h3 {
+        font-size: 1.25rem; /* Adjust heading size */
+    }
+
+    p {
+        font-size: 0.9rem; /* Adjust paragraph size */
+    }
+
+    .role-label {
+        font-size: 0.8rem; /* Smaller font size */
+        width: 100px; /* Reduce width */
+        padding: 3px 6px; /* Adjust padding */
+        top: -20px; /* Adjust position relative to the content */
+    }
+
+    .requester-label {
+        left: 10px; /* Position label for requester */
+    }
+
+    .tasker-label {
+        right: 10px; /* Position label for tasker */
+    }
+
+    /* Testimonial Section Adjustments */
+    .testimonial-items {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Full width */
+    }
+
+    .testimonial {
+        width: 90%; /* Ensure testimonials fit the screen */
+        text-align: center; /* Center text inside testimonials */
+    }
+
+    .testimonial-photo {
+        margin: 0 auto 10px auto; /* Center the photo */
+    }
+    .testimonial-text {
+        font-size: 1rem; /* Adjust text size for readability */
+    }
+
+    .testimonial-name {
+        font-size: 0.9rem;
+    }
+
+    /* Email Signup Form */
+    .email-signup {
+        max-width: 100%; /* Full width */
+        padding: 1rem; /* Adjust padding for mobile */
+    }
+
+    /* Footer Adjustments */
+    footer {
+        padding: 1rem;
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+
+    .footer-content {
+        text-align: center; /* Center-align footer text */
+    }
+
+    /* Social Media Icon Size Adjustments */
+    .social-links img {
+        width: 40px;
+        height: 40px; /* Smaller icons for mobile */
     }
 }
