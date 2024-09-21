@@ -679,6 +679,10 @@ footer p {
         width: 120px;
     }
 
+    .subscription-form-1 {
+        gap: 1.5rem;
+    }
+
     /* Instructions Section Adjustments */
     .steps-row {
         flex-direction: column; /* Stack items vertically */
