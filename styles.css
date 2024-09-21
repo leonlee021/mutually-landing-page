@@ -147,6 +147,17 @@ header h1 {
 .hero-image img:nth-child(3) { animation-delay: 8s; }
 .hero-image img:nth-child(4) { animation-delay: 12s; }
 
+/* Hide mobile-only elements by default */
+.mobile-only {
+    display: none;
+}
+
+/* Show desktop-only elements by default */
+/* .desktop-only {
+    display: block;
+} */
+
+
 /* Subscription Form Styling */
 .subscription-form-1 {
     display: flex;
@@ -495,16 +506,6 @@ h2 {
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
-    .testimonial-items {
-        flex-direction: column;
-    }
-    .testimonial {
-        flex-basis: 100%; /* Full width on small screens */
-    }
-}
-
-
 footer {
     background-color: #023047;
     color: #ffffff;
@@ -621,25 +622,62 @@ footer p {
         padding: 1rem 0;
     }
 
+    /* Adjust hero image styles for mobile */
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .hero-image img {
+        position: relative; /* Remove absolute positioning */
+        max-width: 40%; /* Adjust the size for mobile view */
+        height: auto;
+        border-radius: 15px;
+        opacity: 1; /* Ensure the image is visible */
+        animation: none; /* Remove animation for mobile */
+    }
 
 
     /* Hero Section Adjustments */
     .hero-container {
         flex-direction: column; /* Stack text and image vertically */
+        padding: 30px;
     }
+
+
+    .mobile-only {
+        display: block;
+    }
+
+    /* Hide desktop-only elements in mobile view */
+    .desktop-only {
+        display: none;
+    }
+
 
     .hero-text {
         text-align: center;
         padding-right: 0;
         margin-bottom: 2rem;
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
+        padding: 20px;
     }
 
-
-    .hero-image img {
-        max-width: 80%; /* Adjust the size of the image for mobile */
-        height: auto;
+    .hero-text h2 {
+        font-size: 2.3rem;
     }
 
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+
+    .app-buttons img {
+        width: 120px;
+    }
 
     /* Instructions Section Adjustments */
     .steps-row {
@@ -666,12 +704,16 @@ footer p {
         font-size: 1rem; /* Decrease font size for readability */
     }
 
-    h3 {
-        font-size: 1.25rem; /* Adjust heading size */
+    .steps-row h3 {
+        font-size: 1.5rem;
+        color: #343a40;
+        margin-bottom: 0.5rem;
     }
-
-    p {
-        font-size: 0.9rem; /* Adjust paragraph size */
+    
+    /* Paragraph styling */
+    .steps-row p {
+        font-size: 1.2rem;
+        color: #495057;
     }
 
     .role-label {
