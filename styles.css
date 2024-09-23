@@ -240,7 +240,10 @@ h2 {
     font-size: 1.4rem;
     margin-top: 1.5rem;
     font-weight: 600; /* Make it more prominent */
-    color: #000000;
+}
+
+#launch-info {
+    color: #444444;
 }
 
 
@@ -609,7 +612,7 @@ footer p {
     .hero {
         padding: 1rem 0;
         margin-top: 150px;
-        margin-bottom: 200px;
+        margin-bottom: 400px;
     }
 
     /* Adjust hero image styles for mobile */
@@ -643,6 +646,11 @@ footer p {
         color: black;
         margin-top: 50px;
         font-weight: 600; /* Make it more prominent */
+    }
+
+    #launch-info {
+        color: #444444;
+        font-size: 1.5rem;
     }
 
 
