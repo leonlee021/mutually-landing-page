@@ -637,7 +637,7 @@ footer p {
 
     .hero-image img {
         position: relative; /* Remove absolute positioning */
-        max-width: 43%; /* Adjust the size for mobile view */
+        max-width: 50%; /* Adjust the size for mobile view */
         height: auto;
         border-radius: 15px;
         opacity: 1; /* Ensure the image is visible */
