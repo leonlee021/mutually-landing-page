@@ -651,6 +651,7 @@ footer p {
     #launch-info {
         color: #444444;
         font-size: 1.5rem;
+        width: 90%;
     }
 
 
@@ -686,7 +687,6 @@ footer p {
         display: flex;
         justify-content: center; /* Center the app buttons */
         align-items: center;
-        gap: 1rem; /* Space between the buttons */
         margin-top: 1.5rem; /* Add margin to create more space */
     }
 
