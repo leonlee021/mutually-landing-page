@@ -627,6 +627,7 @@ footer p {
 
     .hero {
         padding: 1rem 0;
+        margin-top: 150px;
         margin-bottom: 50px;
     }
 
@@ -640,7 +641,7 @@ footer p {
 
     .hero-image img {
         position: relative; /* Remove absolute positioning */
-        max-width: 50%; /* Adjust the size for mobile view */
+        max-width: 60%; /* Adjust the size for mobile view */
         height: auto;
         border-radius: 15px;
         opacity: 1; /* Ensure the image is visible */
@@ -652,6 +653,13 @@ footer p {
     .hero-container {
         flex-direction: column; /* Stack text and image vertically */
         padding: 30px;
+    }
+
+    .launch-info {
+        font-size: 1.2rem;
+        color: #495057; /* Softer grey for contrast */
+        margin-top: 1.5rem;
+        font-weight: 600; /* Make it more prominent */
     }
 
 
@@ -706,7 +714,7 @@ footer p {
     }
 
     .instruction img {
-        max-width: 80%; /* Ensure images scale to fit smaller screens */
+        max-width: 100%; /* Ensure images scale to fit smaller screens */
         height: auto;
         margin-bottom: 10px;
     }
