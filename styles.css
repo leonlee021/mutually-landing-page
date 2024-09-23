@@ -164,6 +164,11 @@ header h1 {
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 1.5rem;
+    gap: 1.5rem;
+}
+
+.subscribe-button {
+    margin-top: 10px;
 }
 
 @keyframes fadeAnimation {
@@ -414,7 +419,7 @@ h2 {
 /* Image styling to fit within the container */
 .instruction img {
     width: 100%;
-    max-width: 350px;
+    max-width: 250px;
     height: auto;
     border-radius: 10px;
     margin-top: 10px;
@@ -434,14 +439,14 @@ h2 {
 
 /* Heading styling */
 .steps-row h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #343a40;
     margin-bottom: 0.5rem;
 }
 
 /* Paragraph styling */
 .steps-row p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: #495057;
 }
 
@@ -632,7 +637,7 @@ footer p {
 
     .hero-image img {
         position: relative; /* Remove absolute positioning */
-        max-width: 40%; /* Adjust the size for mobile view */
+        max-width: 43%; /* Adjust the size for mobile view */
         height: auto;
         border-radius: 15px;
         opacity: 1; /* Ensure the image is visible */
@@ -693,12 +698,12 @@ footer p {
     }
 
     .instruction {
-        width: 60%; /* Ensure the instruction takes up most of the screen */
+        width: 80%; /* Ensure the instruction takes up most of the screen */
         margin-bottom: 20px; /* Add spacing between steps */
     }
 
     .instruction img {
-        max-width: 100%; /* Ensure images scale to fit smaller screens */
+        max-width: 60%; /* Ensure images scale to fit smaller screens */
         height: auto;
         margin-bottom: 10px;
     }
