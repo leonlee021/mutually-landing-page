@@ -678,6 +678,21 @@ footer p {
         width: 120px;
     }
 
+    #email-input {
+        width: 90%; /* Adjust width if necessary */
+        padding: 12px 20px; /* Adjust padding to ensure text fits well */
+        border: 2px solid #ccc;
+        border-radius: 50px; /* Keep the rounded borders */
+        outline: none;
+        font-size: 1rem; /* Ensure the font size is not too large */
+        transition: border-color 0.3s;
+        box-sizing: border-box; /* Ensures padding does not affect the overall width */
+    }
+
+    .subscribe-button {
+        width: 80%;
+    }
+
     .subscription-form-1 {
         gap: 1.5rem;
         margin-bottom: 100px;
