@@ -696,8 +696,8 @@ footer p {
     }
 
     #email-input {
-        width: 90%; /* Adjust width if necessary */
-        padding: 12px 20px; /* Adjust padding to ensure text fits well */
+        width: 100%; /* Adjust width if necessary */
+        padding: 15px 20px; /* Adjust padding to ensure text fits well */
         border: 2px solid #ccc;
         border-radius: 50px; /* Keep the rounded borders */
         outline: none;
