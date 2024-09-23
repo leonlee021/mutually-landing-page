@@ -641,7 +641,7 @@ footer p {
     }
 
     .launch-info {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         /*color: #495057; /* Softer grey for contrast */
         color: black;
         margin-top: 50px;
@@ -682,8 +682,17 @@ footer p {
         font-size: 1.2rem;
     }
 
+    .app-buttons {
+        display: flex;
+        justify-content: center; /* Center the app buttons */
+        align-items: center;
+        gap: 1rem; /* Space between the buttons */
+        margin-top: 1.5rem; /* Add margin to create more space */
+    }
+
     .app-buttons img {
-        width: 120px;
+        width: 120px; /* Adjust button size for mobile */
+        height: auto;
     }
 
     #email-input {
