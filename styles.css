@@ -706,7 +706,7 @@ footer p {
     }
 
     .instruction img {
-        max-width: 60%; /* Ensure images scale to fit smaller screens */
+        max-width: 80%; /* Ensure images scale to fit smaller screens */
         height: auto;
         margin-bottom: 10px;
     }
