@@ -627,8 +627,8 @@ footer p {
 
     .hero {
         padding: 1rem 0;
-        margin-top: 150px;
-        margin-bottom: 50px;
+        margin-top: 100px;
+        margin-bottom: 100px;
     }
 
     /* Adjust hero image styles for mobile */
@@ -636,12 +636,13 @@ footer p {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 20px;
         /*margin: 20px 0;*/
     }
 
     .hero-image img {
         position: relative; /* Remove absolute positioning */
-        max-width: 60%; /* Adjust the size for mobile view */
+        max-width: 80%; /* Adjust the size for mobile view */
         height: auto;
         border-radius: 15px;
         opacity: 1; /* Ensure the image is visible */
@@ -697,6 +698,7 @@ footer p {
 
     .subscription-form-1 {
         gap: 1.5rem;
+        margin-bottom: 20px;
     }
 
     /* Instructions Section Adjustments */
