@@ -259,7 +259,8 @@ p {
 /* Launch Info Styling */
 .launch-info {
     font-size: 1.4rem;
-    color: #495057; /* Softer grey for contrast */
+    /*color: #495057; /* Softer grey for contrast */
+    color: black;
     margin-top: 1.5rem;
     font-weight: 600; /* Make it more prominent */
 }
