@@ -17,13 +17,9 @@ html, body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-
-
 section {
-    /*scroll-snap-align: start; /* Each section will align to the start of the viewport */
     width: 100%; /* Ensures sections stretch across the full width */
     min-height: 100vh; /* Each section takes at least the height of the viewport */
-    
     display: flex;
     justify-content: center;
     align-items: center; /* Centers content within each section */
@@ -35,9 +31,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    /* background-color: #ffffff; */
     z-index: 1000;
-    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -51,7 +45,6 @@ header {
     justify-content: space-between;
 }
 
-/* Logo Styling */
 .logo {
     font-weight: 700;
     font-size: 1.5rem;
@@ -59,7 +52,6 @@ header {
     margin: 0;
 }
 
-/* Sticky Header Adjustment */
 body {
     padding-top: 80px; /* Ensure content is not hidden behind the fixed header */
 }
@@ -71,7 +63,6 @@ header h1 {
     color: #1DA1F2; /* Brand color for app name */
 }
 
-/* Hero Section Styling */
 .hero {
     height: 100vh; /* Full height */
     display: flex;
@@ -153,12 +144,6 @@ header h1 {
 .mobile-only {
     display: none;
 }
-
-/* Show desktop-only elements by default */
-/* .desktop-only {
-    display: block;
-} */
-
 
 /* Subscription Form Styling */
 .subscription-form-1 {
@@ -249,21 +234,16 @@ h2 {
     font-weight: 700;
 }
 
-p {
-    font-size: 1.5rem;
-    color: #6c757d; /* Softer gray for paragraph */
-    margin-bottom: 1.5rem;
-}
-
 
 /* Launch Info Styling */
 .launch-info {
     font-size: 1.4rem;
-    /*color: #495057; /* Softer grey for contrast */
-    color: black;
     margin-top: 1.5rem;
     font-weight: 600; /* Make it more prominent */
+    color: #000000;
 }
+
+
 .btn {
     background-color: #1DA1F2;
     padding: 1rem 2rem;
@@ -436,7 +416,7 @@ h2 {
     gap: 2rem; /* Gap between text and image */
     width: 100%;
     max-width: 100%; /* Take full width of the container */
-    padding: 20px; */
+    padding: 20px; 
 }
 
 
@@ -658,9 +638,10 @@ footer p {
     }
 
     .launch-info {
-        font-size: 1.2rem;
-        color: #495057; /* Softer grey for contrast */
-        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        /*color: #495057; /* Softer grey for contrast */
+        color: black;
+        margin-top: 50px;
         font-weight: 600; /* Make it more prominent */
     }
 
